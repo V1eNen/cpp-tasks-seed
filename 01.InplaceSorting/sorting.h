@@ -12,14 +12,16 @@ void bubble_sort(Iterator begin, Iterator end)
 {
     if (begin == end) return;
     bool swapped = true;
-    while (swapped){
+    while (swapped)
+    {
         swapped = false;
 
         Iterator current = begin;
         Iterator next = begin;
         ++next;
 
-        while (next != end){
+        while (next != end)
+        {
             if (*next < *current)
             {
                 std::swap(*current,*next);
@@ -44,15 +46,19 @@ void quick_sort(Iterator begin, Iterator end)
     Iterator left = begin;
     Iterator right = curr;
 
-    while (left != right){
-        while (left != right && *left < curr_val) {
+    while (left != right)
+    {
+        while (left != right && *left < curr_val)
+        {
             ++left;
         }
-        while (left != right && !(*right < curr_val)){
+        while (left != right && !(*right < curr_val))
+        {
             --right;
         }
-        if (left != right){
-        std::swap(*left,*right);
+        if (left != right)
+        {
+            std::swap(*left,*right);
         }
     }
     std::swap(*left,*curr);

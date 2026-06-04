@@ -18,7 +18,8 @@ const std::vector<std::pair<const char *, const char * >> short_cases =
     { "F)}kW","1234" }
 };
 
-const std::vector<std::pair<const char*, const char*>> medium_cases = {
+const std::vector<std::pair<const char*, const char*>> medium_cases =
+{
     { "F)}kWH2",          "12345"      },
     { "F)}kWH8u",         "123456"     },
     { "F)}kWH8wW",        "1234567"    },
