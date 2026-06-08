@@ -31,12 +31,14 @@ TEST(GaussSolve, SmallSystem3x3)
 {
     GaussMatrix ab(3, 4);
     ab << 1, 1, 1, 6,
-    2, -1, 3, 14,
-    -1, 2, -1, -2;
+          2, -1, 3, 14,
+         -1, 2, -1, -2;
+
     GaussVector sol = Gauss_solve(ab);
-    EXPECT_NEAR(sol(0), 1.0, 1e-6);
-    EXPECT_NEAR(sol(1), 2.0, 1e-6);
-    EXPECT_NEAR(sol(2), 3.0, 1e-6);
+
+    EXPECT_NEAR(sol(0), -4.0/3.0, 1e-6);
+    EXPECT_NEAR(sol(1),  4.0/3.0, 1e-6);
+    EXPECT_NEAR(sol(2),  6.0,     1e-6);
 }
 
 TEST(GaussSolve, RandomSystem)
